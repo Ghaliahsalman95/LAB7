@@ -79,7 +79,7 @@
             ArrayList<Teacher> noasignTeacher = new ArrayList<>();
             for (Teacher teacher : teacherService.get_Teachers()) {
 
-                if (teacher.getCourse().getCode().equalsIgnoreCase(courseCode)) {
+                if (!teacher.getCourse().getCode().equalsIgnoreCase(courseCode)) {
                     noasignTeacher.add(teacher);
                 }
             }
